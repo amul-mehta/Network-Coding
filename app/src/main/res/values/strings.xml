@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Network Coding</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">About Us</string>
+    <string name="but1">Client</string>
+    <string name="but2">Decode</string>
+    <string name="but3">Send</string>
+    <string name="but4">Client</string>
+    <string name="but5">SendS</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="title_connecting">Connecting</string>
+    <string name="title_not_connected">Not Connected</string>
+    <string name="VBut">Display</string>
+    <string name="n1">1</string>
+    <string name="n2">2</string>
+    <string name="n3s">3S</string>
+    <string name="n3c">3C</string>
+    <string name="n4s">4S</string>
+    <string name="n4c">4C</string>
+    <string name="n5">5</string>
+    <string name="n6">6</string>
+    <string name="ok">Ok</string>
+</resources>
