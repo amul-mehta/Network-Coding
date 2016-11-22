@@ -108,84 +108,16 @@ public class MainActivity extends Activity {
             myd = device;
         }
 
-    /*public static void DisplayStr(String ss){
-
-       /// Toast.makeText(, ss, Toast.LENGTH_SHORT).show();
-
-    }*/
-/*        BluetoothSocket tmp = null;
-        mmDevice = myd;
-
-        // Get a BluetoothSocket to connect with the given BluetoothDevice
-        try {
-            // MY_UUID is the app's UUID string, also used by the server code
-            tmp = myd.createRfcommSocketToServiceRecord(appUUID);
-
-        }
-
-        catch (IOException e) {
-        }
-        mmSocket = tmp;
-        myBluetoothAdapter.cancelDiscovery();
-
-        try {
-            // Connect the device through the socket. This will block
-            // until it succeeds or throws an exception
-            mmSocket.connect();
-            Toast.makeText(getApplicationContext(),"Connected",
-                    Toast.LENGTH_SHORT).show();
-            sock=mmSocket;
-        }
-        catch (IOException connectException) {
-            // Unable to connect; close the socket and get out
-            try {
-                mmSocket.close();
-            }
-            catch (IOException closeException) {
-            }
-        }*/
 
     }
-   /* public void Sendmsg(View v){
-       try{
-        outputStream = mmSSocket.getOutputStream();
-        EditText ListB = (EditText) findViewById(R.id.editText);
-        String s = ListB.getText().toString();
-        outputStream.write(s.getBytes());
-               Log.v(TAG,s);
-           Toast.makeText(getApplicationContext(),"Message Sent",
-                   Toast.LENGTH_SHORT).show();
 
-       }
-       catch (IOException ioe){}
-
-
-
-}
-*/
-@Override
+    @Override
   public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-   /* public void OnServ(View v)
-    {
-        Toast.makeText(getApplicationContext(), "Server", Toast.LENGTH_SHORT).show();
-
-        AcceptThread ath = new AcceptThread();
-        ath.start();
-
-
-    }
-    public void OnClient(View v) {
-        Toast.makeText(getApplicationContext(), "Client", Toast.LENGTH_SHORT).show();
-
-        ConnectThread cth = new ConnectThread(myd);
-        cth.start();
-
-
-    }*/
+ 
         @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -198,7 +130,7 @@ public class MainActivity extends Activity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Created By:\n"+"Amul.Mehta         12BCE043\n"+
                                                "Ria.Mirchandani  12BCE047\n"+
-                                               "Jayeta.Matreja    12BCE061\n\nImplementing Network Coding On a ButterFly Network" );
+                                               "\nImplementing Network Coding On a ButterFly Network" );
             builder.setTitle("About Us");
             builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
@@ -305,66 +237,7 @@ public class MainActivity extends Activity {
 
     }
 
-    /*  public void OnServ(View v)
-      {
-          String st="NetworkCoding";
-          BluetoothServerSocket tmp = null;
-          try {
-              tmp=myBluetoothAdapter.listenUsingRfcommWithServiceRecord(st, appUUID);
-              mmServerSocket = tmp;
-              BluetoothSocket socket = null;
-              // Keep listening until exception occurs or a socket is returned
-              while (true) {
-                  try {
-                      socket = mmServerSocket.accept();
-                  } catch (IOException e) {
-                      break;
-                  }
-                  // If a connection was accepted
-                  if (socket != null) {
-                      // Do work to manage the connection (in a separate thread)
-                    //  manageConnectedSocket(socket);
-                      mmSSocket=socket;
-                      mmServerSocket.close();
-                      Toast.makeText(getApplicationContext(),"Connected",
-                             Toast.LENGTH_SHORT).show();
-                      //recv();
-
-                      break;
-                  }
-              }
-          }
-          catch (IOException ioe){
-
-
-          }
-
-      }
-      public void recvmsg(View v)
-      {
-          final int BUFFER_SIZE = 1024;
-          byte[] buffer = new byte[BUFFER_SIZE];
-          int bytes = 0;
-          int b = BUFFER_SIZE;
-
-          while (true) {
-              try {
-                  inStream = mmSSocket.getInputStream();
-                  //bytes = inStream.read(buffer, bytes, BUFFER_SIZE - bytes);
-                  bytes = inStream.read(buffer);
-
-                  String readMessage = new String(buffer, 0, bytes);
-                  Log.i(TAG,"Yo Dude");
-               //   Toast.makeText(getApplicationContext(),readMessage,Toast.LENGTH_SHORT).show();
-
-              } catch (IOException e) {
-                  e.printStackTrace();
-              }
-          }
-
-
-
-      }*/
+ 
     public class ConnectThread extends Thread {
 
         private final BluetoothSocket mmSocket;
